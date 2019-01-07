@@ -1,0 +1,11 @@
+<i-tabs current="{{ current }}" bindchange="handleChange">
+  <i-tab key="tab1" title="全部"></i-tab>
+  <i-tab key="tab2" title="仅上课"></i-tab>
+  <i-tab key="tab3" title="仅健身"></i-tab>
+</i-tabs>
+<view wx:if="{{tab1}}" class='tab1'>
+</view>
+<view wx:if="{{tab2}}" class='tab1'>
+</view>
+<view wx:if="{{tab3}}" class='tab1'>
+</view>

@@ -1,0 +1,25 @@
+.title-left text{font-size:22rpx;display:block}
+.title-right text{font-size:22rpx;display:block}
+.venue-title text{font-size:22rpx;padding:10rpx;}
+.venue-title-right{float:right}
+.venue-title-right text{color:darkgray}
+.venue-detail{margin-top:15rpx}
+.venue-detail-wrap{height:300rpx; width:100%; display: flex; display: -webkit-box; flex-direction: column;} 
+.venue-detail-wrap-item{ width: 240rpx; height: 240rpx; flex: 1;padding-left: 20rpx} 
+.venue-detail-wrap-item text{font-size:30rpx}
+.venue-detail-wrap-item-img{ width: 240rpx; height: 240rpx;border-radius: 20rpx}
+
+.slide-image{height:100%;width:95%;border-radius:20rpx}
+.adv-img image{width:95%;height:300rpx;border-radius: 20rpx}
+.adv-img-frame{text-align: center}
+
+.line{height:20rpx}
+
+.coach-title-left text{font-size:28rpx;padding:10rpx;font-weight:bold}
+.coach-title-right{float:right}
+.coach-title-right text{font-size:22rpx;color:darkgray}
+.coach-detail-wrap{height:300rpx; width:100%; display: flex; display: -webkit-box; flex-direction: column;} 
+.coach-detail-wrap-item{ width: 160rpx; height: 160rpx; flex: 1;padding-left: 20rpx;text-align: center} 
+.coach-detail-wrap-item-img{ width: 160rpx; height: 160rpx;border-radius: 150rpx;display: block}
+.coach-detail-warp-item-text-one{display:block;font-size:30rpx;font-weight: bold;margin-top: 10rpx}
+.coach-detail-warp-item-text-two{display:block;font-size:22rpx;margin-top:10rpx;color:darkgray}

@@ -1,0 +1,10 @@
+{
+  "usingComponents":{
+    "i-row": "../../iview/row/index",
+    "i-col": "../../iview/col/index",
+    "i-icon": "../../iview/icon/index",
+    "i-divider": "../../iview/divider/index",
+    "i-tag": "../../iview/tag/index",
+    "i-avatar": "../../iview/avatar/index"
+  }
+}

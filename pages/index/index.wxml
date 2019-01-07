@@ -1,0 +1,99 @@
+<view class="title">
+  <i-row>
+    <view class="title-left">
+      <i-col span="2" i-class="col-class">　</i-col>
+      <i-col span="10" i-class="col-class">
+        <i-icon size="40" type="remind" />
+        <text>消息中心</text>
+      </i-col>
+    </view>
+    <view class="title-right">
+      <i-col span="7" i-class="col-class">　</i-col>
+      <i-col span="5" i-class="col-class">
+        <i-icon size="40" type="scan" />
+        <text>扫码健身</text>
+      </i-col>
+    </view>
+  </i-row>
+</view>
+<i-divider content=""></i-divider>
+<i-row class="slide">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{arr[0]}}" wx:key="index">
+      <swiper-item style="text-align:center">
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</i-row>
+<i-divider content="">
+  <i-icon type="like" /></i-divider>
+<view class="venue-title">
+  <i-row>
+    <view class="venue-title-left">
+      <i-col span="12" i-class="col-class">
+        <text>附近场馆</text>
+        <i-tag class="i-tags" name="仅上课" color="{{attendClassColor}}" type="border" bindtap="attendClass">仅上课</i-tag>
+      </i-col>
+    </view>
+    <i-col span="12" i-class="col-class">
+      <view class="venue-title-right" bindtap="goVenueList">
+        <text>全部场馆></text>
+      </view>
+    </i-col>
+  </i-row>
+</view>
+<view class="venue-detail">
+  <i-row>
+    <scroll-view scroll-x="true">
+      <view class="venue-detail-wrap" scroll-x="true">
+        <block wx:for="{{venues}}" wx:key="index">
+          <view class="venue-detail-wrap-item" bindtap="goStoreDetail">
+            <image class="venue-detail-wrap-item-img" src="{{item.venue_thumb}}"></image>
+            <text>{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </i-row>
+</view>
+<i-divider content="">
+  <i-icon type="like" /></i-divider>
+<view class="adv-img">
+  <i-row class="adv-img-frame">
+    <image src="{{arr[1][0]}}"></image>
+  </i-row>
+</view>
+<i-divider content="">
+  <i-icon type="like" /></i-divider>
+
+<view class="coach-title">
+  <i-row>
+    <view>
+      <i-col span="12" i-class="col-class">
+        <view class="coach-title-left">
+          <text>推荐教练</text>
+        </view>
+      </i-col>
+    </view>
+    <i-col span="12" i-class="col-class">
+      <view class="coach-title-right">
+        <text>全部教练></text>
+      </view>
+    </i-col>
+  </i-row>
+</view>
+<view class="line"></view>
+<i-row>
+  <scroll-view scroll-x="true">
+    <view class="coach-detail-wrap" scroll-x="true">
+      <block wx:for="{{coach}}" wx:key="index">
+        <view class="coach-detail-wrap-item">
+          <image class="coach-detail-wrap-item-img" src="{{item.thumb_img}}"></image>
+          <text class="coach-detail-warp-item-text-one">{{item.name}}</text>
+          <text class="coach-detail-warp-item-text-two">累积上课{{item.sale_num}}节</text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</i-row>

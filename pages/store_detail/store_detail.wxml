@@ -1,0 +1,148 @@
+<i-tabs current="{{ current }}" bindchange="handleChange">
+  <i-tab key="tab1" title="选项1"></i-tab>
+  <i-tab key="tab2" title="选项2"></i-tab>
+  <i-tab key="tab3" title="选项3"></i-tab>
+</i-tabs>
+
+<view wx:if="{{tab1}}" class='tab1'>
+  <i-row class="slide">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+      <block wx:for="{{arr}}" wx:key="{{index}}">
+        <swiper-item class="slide-content">
+          <image src="{{item}}" class="slide-content-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </i-row>
+  <view class="title-desc">
+    <i-row>
+      <i-col span="24" i-class="col-class">
+        <text>原子健身俱乐部</text>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="18" i-class="col-class">
+        <text>谷城县汾阳路111号</text>
+      </i-col>
+      <i-col span="6" i-class="col-class" class="title-desc-twoline">
+        <text>导航</text>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="18" i-class="col-class">
+        <text>教师数量:4</text>
+      </i-col>
+      <i-col span="6" i-class="col-class" class="title-desc-threeline">
+        <text>购卡</text>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="18" i-class="col-class">
+        <text>场馆面积:3500m</text>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="18" i-class="col-class">
+        <text>营业时间:10:00-22:00</text>
+      </i-col>
+    </i-row>
+    <i-divider content="">
+      <i-icon type="like" /></i-divider>
+    <view class="parts-desc">
+      <i-row>
+        <i-col span="24" i-class="col-class">
+          <text>配套设施</text>
+        </i-col>
+      </i-row>
+      <i-row>
+        <scroll-view scroll-x="true">
+          <view class="parts-desc-wrap" scroll-x="true">
+            <block wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:key="index">
+              <view class="parts-desc-wrap-item">
+                <image class="parts-desc-wrap-item-img" src="../../static/img/banner1.png"></image>
+                <text>测试</text>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+      </i-row>
+    </view>
+    <i-divider content="">
+      <i-icon type="like" /></i-divider>
+    <view class="site-show">
+      <i-row>
+        <i-col span="24" i-class="col-class">
+          <text>场馆介绍</text>
+        </i-col>
+        <i-col span="24" i-class="col-class">
+          <text>场馆介绍ascascas但是速度速度多少速度速度速度多少</text>
+        </i-col>
+      </i-row>
+      <i-row>
+        <scroll-view scroll-x="true">
+          <view class="site-show-wrap" scroll-x="true">
+            <block wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:key="index">
+              <view class="site-show-wrap-item">
+                <image class="site-show-wrap-item-img" src="../../static/img/banner1.png"></image>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+      </i-row>
+    </view>
+  </view>
+</view>
+<view wx:if="{{tab2}}" class='tab2'>
+  <view class="goods">
+    <view class="good">
+      <image class="good-img" src="../../static/img/banner1.png"></image>
+      <text>刘家富</text>
+      <text>超神之旅</text>
+      <text>累计超鬼399次</text>
+    </view>
+  </view>
+</view>
+<view wx:if="{{tab3}}" class='tab3'>
+  <view class="comment">
+    <i-row>
+      <i-col span="3" i-class="col-class">
+        <i-avatar>刘</i-avatar>
+      </i-col>
+      <i-col span="7" i-class="col-class">
+        <text>刘家富</text>
+      </i-col>
+      <i-col span="7" i-class="col-class">
+        <i-icon type="collection" /></i-col>
+      <i-col span="7" i-class="col-class">
+        <text>2018-12-31</text>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="3" i-class="col-class">　</i-col>
+      <i-col span="21" i-class="col-class">这家洗脚不错，五星级。下次来半个会员</i-col>
+    </i-row>
+    <i-divider content="">
+      <i-icon type="like" /></i-divider>
+  </view>
+  <view class="comment">
+    <i-row>
+      <i-col span="3" i-class="col-class">
+        <i-avatar>刘</i-avatar>
+      </i-col>
+      <i-col span="7" i-class="col-class">
+        <text>刘家富</text>
+      </i-col>
+      <i-col span="7" i-class="col-class">
+        <i-icon type="collection" /></i-col>
+      <i-col span="7" i-class="col-class">
+        <text>2018-12-31</text>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="3" i-class="col-class">　</i-col>
+      <i-col span="21" i-class="col-class">这家洗脚不错，五星级。下次来半个会员</i-col>
+    </i-row>
+    <i-divider content="">
+      <i-icon type="like" /></i-divider>
+  </view>
+</view>
