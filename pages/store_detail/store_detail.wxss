@@ -11,4 +11,4 @@
 .site-show-wrap-item-img{ width: 220rpx; height: 220rpx;display: block}
 .good{float:left;height: 550rpx;width:320rpx;padding-left:35rpx}
 .good text{display:block;font-size: 16px}
-.good-img{height: 320rpx;width:320rpx}
+.good-img{height: 320rpx;width:320rpx;}

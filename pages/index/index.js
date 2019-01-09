@@ -44,6 +44,12 @@ Page({
             coach: res.data
           })
         }
+      }),
+      wx.request({
+        url:"https://apis.map.qq.com/ws/geocoder/v1/?address=谷城县&key=P6SBZ-2W3RK-UG3JD-APLZ6-4MMEZ-XIB7F",
+        success:function(res){
+          console.log(res)
+        }
       })
 
   },

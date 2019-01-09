@@ -1,1 +1,2 @@
 /* pages/venue_list/venue_list.wxss */
+.venue{padding-top:20rpx}

@@ -4,6 +4,20 @@
   <i-tab key="tab3" title="仅健身"></i-tab>
 </i-tabs>
 <view wx:if="{{tab1}}" class='tab1'>
+  <block wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:key="index">
+    <view class="venue">
+      <i-row>
+        <i-col span="1" class="col-class">　</i-col>
+        <i-col span="6" class="col-class"><image style="height:240rpx;width:240rpx" src="../../static/img/banner1.png"></image></i-col>
+        <i-col span="3" class="col-class">　</i-col>
+        <i-col span="14" class="col-class">
+          <text style="display:block;font-size:30rpx">拿铁健身</text>
+          <text style="display:block;font-size:26rpx;color:darkgray;padding-top:10rpx">我的顶顶顶顶顶顶顶顶顶顶顶顶</text>
+        </i-col>
+      </i-row>  
+    </view> 
+    <i-divider content=""><i-icon type="like" /></i-divider>       
+  </block>
 </view>
 <view wx:if="{{tab2}}" class='tab1'>
 </view>
