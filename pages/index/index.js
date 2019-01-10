@@ -30,6 +30,16 @@ Page({
         data: {},
         success: function(res) {
           console.log(res.data)
+          console.log(app.globalData.location)
+          for(var index in res.data)
+          {
+            var distance = that.getDistance(app.globalData.location['latitude'], app.globalData.location['longitude'], res.data[index]['lat'], res.data[index]['lng'])
+
+            res.data[index]['juli'] = parseInt(distance / 1000) + "公里";
+
+         //   this.getDistance(1,2,3,4);
+          }
+          console.log(res.data)
           that.setData({
             venues: res.data
           })
@@ -44,14 +54,10 @@ Page({
             coach: res.data
           })
         }
-      }),
-      wx.request({
-        url:"https://apis.map.qq.com/ws/geocoder/v1/?address=谷城县&key=P6SBZ-2W3RK-UG3JD-APLZ6-4MMEZ-XIB7F",
-        success:function(res){
-          console.log(res)
-        }
       })
 
+  },
+  onShow:function(){
   },
   goStoreDetail(event) {
     wx.navigateTo({
@@ -76,6 +82,21 @@ Page({
         attendClassColor: null
       })
     }
+  },
+  getDistance: function(lat1, lng1, lat2, lng2) {
+    lat1 = lat1 || 0;
+    lng1 = lng1 || 0;
+    lat2 = lat2 || 0;
+    lng2 = lng2 || 0;
+
+    var rad1 = lat1 * Math.PI / 180.0;
+    var rad2 = lat2 * Math.PI / 180.0;
+    var a = rad1 - rad2;
+    var b = lng1 * Math.PI / 180.0 - lng2 * Math.PI / 180.0;
+    var r = 6378137;
+    var distance = r * 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(rad1) * Math.cos(rad2) * Math.pow(Math.sin(b / 2), 2)));
+
+    return distance;
   }
 
 })

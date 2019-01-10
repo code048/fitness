@@ -3,6 +3,7 @@ Page({
     current: 'tab1',
     tab1: true,
   },
+
   handleChange({ detail }) {
     var index = detail.key
     this.setData({

@@ -1,0 +1,6 @@
+<!--pages/guide/guide.wxml-->
+<view class="main">
+  <view class="main_logo">
+    <text class="mian_text">欢迎</text>
+  </view>
+</view>

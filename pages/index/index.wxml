@@ -51,6 +51,7 @@
           <view class="venue-detail-wrap-item" bindtap="goStoreDetail">
             <image class="venue-detail-wrap-item-img" src="{{item.venue_thumb}}"></image>
             <text>{{item.name}}</text>
+            <text>{{item.juli}}</text>
           </view>
         </block>
       </view>
